@@ -1,0 +1,109 @@
+@import url("./style.css");
+
+#home{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    min-height: calc(100vh - 55px);
+    background-color: #f1f1f1;
+    padding: 1.5rem;
+    gap: 5rem;
+}
+
+#home.display{
+    display: flex;
+}
+#home h1{
+    font-size: 1.5rem;
+}
+#home h1 span{
+    color: var(--color-primary);
+}
+
+#home .all-cards{
+    display: flex;
+    flex-direction: column;
+}
+#home .all-cards h2{
+    margin-bottom: .5rem;
+}
+
+#home .all-cards .cards{
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 1rem;
+}
+
+#home .all-cards .cards .card-1{
+    border: var(--color-border);
+    border-radius: var(--border-radius-1);
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.5rem;
+}
+#home .all-cards .cards .card-1 svg{
+    width: 100px;
+    height: 100px;
+    color: var(--color-primary);
+}
+#home .all-cards .cards .card-1 span{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#home .all-cards .cards-2{
+    grid-auto-rows: 110px;
+}
+#home .all-cards .cards .card-2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    border: var(--color-border);
+    border-radius: var(--border-radius-2);
+    background-color: var(--color-primary-light);
+    padding: 1rem;
+}
+#home .all-cards .cards .card-2 span{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+#home .all-cards .cards .card-2 button{
+    align-self: self-end;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    #home .all-cards .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #home .all-cards .cards .card-2 span{
+        font-size: 1.1rem;
+    }
+    #home .all-cards .cards .card-1 span{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #home .all-cards .cards .card-1 span{
+        font-size: 1rem;
+        text-align: center;
+    }
+    #home .all-cards .cards .card-2 span{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    #home .all-cards .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

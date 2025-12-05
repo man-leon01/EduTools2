@@ -1,0 +1,81 @@
+@import url(./style.css);
+
+#load{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#load.active{
+    display: none;
+}
+
+#load>div{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    /* background-color: var(--color-primary); */
+    box-shadow: 0 -0.4rem rgba(0, 0, 1, .1) inset;
+
+    animation: cycle 1s ease-in-out infinite;
+}
+
+#load div:nth-child(1){
+    animation-delay: 0;
+}
+#load div:nth-child(2){
+    animation-delay: 0.2s;
+}
+#load div:nth-child(3){
+    animation-delay: 0.4s;
+}
+
+@keyframes cycle {
+    0% {
+        transform: translateY(0);
+        transition: all .5s ease-in-out;
+    }
+    50% {
+        transform: translateY(1rem);
+        transition: all .5s ease-in-out;
+    }
+    100% {
+        transition: all .5s ease-in-out;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #load>div{
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #load{
+        gap: 1.5rem;
+    }
+    #load>div{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #load{
+        gap: 1rem;
+    }
+    #load>div{
+        width: 50px;
+        height: 50px;
+    }
+}

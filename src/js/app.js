@@ -6,16 +6,48 @@ const subSideNavList = document.querySelectorAll(".sub-side-nav li")
 const menu = document.querySelector("#menu")
 const aSide = document.querySelector("aside")
 const main = document.querySelector("main")
+const mainSections = document.querySelectorAll("main section")
+const load = document.querySelector("#load")
 
+
+setTimeout(() => {
+    load.classList.add("active")
+}, 3000);
+
+
+const obj = {
+    home: "home",
+    gift: "my-gift",
+}
+
+
+
+function displayContainer(key) {
+    if (key in obj) {
+        mainSections.forEach(item => item.classList.contains("display") ? item.classList.remove("display") : null)
+        console.log(main.querySelector(`#${obj[key]}`));
+        main.querySelector(`#${obj[key]}`).classList.add("display")
+        // console.log(main.querySelector(`#${obj[key]}`));
+        console.log(key, mainSections, obj[key]);
+
+    }
+}
 
 for (let element of sideNav) {
     element.addEventListener("click", (e) => {
         e.stopPropagation()
         sideNav.forEach(item => item.classList.remove("active"))
         element.classList.add(("active"))
+
+        displayContainer(element.getAttribute("data-key"))
+        console.log(element.getAttribute("data-key"));
+
         element.parentElement.lastElementChild.nodeName.toLocaleLowerCase() == 'ul' ?
             element.parentElement.lastElementChild.classList.toggle("down"):
             subSideNav.classList.remove("down")
+
+            aSide.classList.contains("side") ? aSide.classList.remove("side") : null
+            main.classList.contains("full") ? main.classList.remove("full") : null
     })
 }
 

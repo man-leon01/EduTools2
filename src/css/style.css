@@ -1,6 +1,8 @@
 /* FONTS FAMILIES */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&display=swap');
 @import url(./mygift.css);
+@import url(./home.css);
+@import url(./load.css);
 
 *, *::after, *::before{
     margin: 0;
@@ -18,8 +20,22 @@ input, button{
     outline: none;
 }
 
+.btn{
+    background-color: var(--color-primary);
+    border: var(--color-border);
+    border-radius: var(--border-radius-3);
+    padding: .4rem .8rem;
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--color-white);
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: var(--color-primary-hover);
+}
+
 ::-webkit-scrollbar{
-    width: 6px;
+    width: 8px;
 }
 ::-webkit-scrollbar-track{
     background-color: #f1f1f1;
@@ -33,6 +49,7 @@ input, button{
 :root{
     --color-primary: #4361ee;
     --color-primary-light: #bfd6ff80;
+    --color-primary-hover: #4f69db;
     --color-danger: #eeaa11;
     --color-success: #eeaa11;
     --color-warning: #eeaa11;
@@ -53,6 +70,7 @@ body{
     color: var(--color-dark);
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
+    position: relative;
 }
 
 aside{
@@ -162,7 +180,7 @@ aside{
 main{
     width: calc(100% - 250px);
     /* height: 100vh; */
-    /* background-color: var(--color-danger); */
+    background-color: var(--color-danger);
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -178,6 +196,7 @@ nav{
     position: sticky;
     top: 0;
     right: 0;
+    left: 0;
 }
 
 #menu{
@@ -203,6 +222,7 @@ nav{
     align-items: center;
     gap: 0.4rem;
 }
+
 
 @media screen and (max-width: 950px) {
     nav{
