@@ -69,6 +69,7 @@ for (let element of subSideNavList) {
 function hoverFunc() {
     aSide.classList.remove("side")
     main.classList.remove("full")
+    subSideNav.classList.remove("down")
 }
 
 
@@ -84,6 +85,7 @@ menu.addEventListener("click", (e) => {
     if (main.classList.contains("full") && aSide.classList.contains("side")) {
         main.classList.remove("full")
         aSide.classList.remove("side")
+        subSideNav.classList.remove("down")
         aSide.addEventListener("mouseleave", hoverFunc)
     } else {
         main.classList.add("full")
