@@ -42,12 +42,18 @@ for (let element of sideNav) {
         displayContainer(element.getAttribute("data-key"))
         console.log(element.getAttribute("data-key"));
 
-        element.parentElement.lastElementChild.nodeName.toLocaleLowerCase() == 'ul' ?
-            element.parentElement.lastElementChild.classList.toggle("down"):
+        aSide.classList.contains("side") ? aSide.classList.remove("side") : null
+        main.classList.contains("full") ? main.classList.remove("full") : null
+        
+        if (element.parentElement.lastElementChild.nodeName.toLocaleLowerCase() == 'ul') {
+            // main.classList.contains("full") ? main.classList.remove("full") : null
+            element.parentElement.lastElementChild.classList.toggle("down")   
+            element.parentElement.lastElementChild.classList.contains("down") ? 
+            aSide.classList.add("side") : aSide.classList.remove("side")
+        } else {
             subSideNav.classList.remove("down")
+        }
 
-            aSide.classList.contains("side") ? aSide.classList.remove("side") : null
-            main.classList.contains("full") ? main.classList.remove("full") : null
     })
 }
 
@@ -59,6 +65,15 @@ for (let element of subSideNavList) {
 
     })
 }
+
+
+aSide.addEventListener("mouseenter", () => {
+    aSide.classList.add("side")
+})
+
+aSide.addEventListener("mouseleave", () => {
+    aSide.classList.remove("side")
+})
 
 menu.addEventListener("click", (e) => {
     e.stopPropagation()

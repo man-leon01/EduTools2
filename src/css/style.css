@@ -124,6 +124,7 @@ aside{
     align-items: center;
     justify-content: flex-start;
     gap: .5rem;
+    min-width: max-content;
 }
 
 .side-nav .side-nav-1{
@@ -165,7 +166,7 @@ aside{
 
 .sub-side-nav.down{
     height: 95%;
-    transition: .2s ease;
+    transition: .3s ease;
 }
 
 .sub-side-nav li{
@@ -275,7 +276,7 @@ nav{
     aside{
         position: absolute;
         overflow: hidden;
-        transition: .3s ease;
+        transition: .5s ease;
         z-index: 5;
         height: calc(100vh - 55px);
         bottom: 0;
@@ -283,7 +284,7 @@ nav{
     }
     aside.side{
         transform: translateX(0%);
-        transition: .4s ease;
+        transition: .5s ease;
     }
     main{
         width: 100%;
