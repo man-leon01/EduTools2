@@ -66,19 +66,30 @@ for (let element of subSideNavList) {
     })
 }
 
+function hoverFunc() {
+    aSide.classList.remove("side")
+    main.classList.remove("full")
+}
+
 
 aSide.addEventListener("mouseenter", () => {
     aSide.classList.add("side")
+    main.classList.add("full")
 })
 
-aSide.addEventListener("mouseleave", () => {
-    aSide.classList.remove("side")
-})
+aSide.addEventListener("mouseleave", hoverFunc)
 
 menu.addEventListener("click", (e) => {
     e.stopPropagation()
-    main.classList.toggle("full")
-    aSide.classList.toggle("side")
+    if (main.classList.contains("full") && aSide.classList.contains("side")) {
+        main.classList.remove("full")
+        aSide.classList.remove("side")
+        aSide.addEventListener("mouseleave", hoverFunc)
+    } else {
+        main.classList.add("full")
+        aSide.classList.add("side")
+        aSide.removeEventListener("mouseleave", hoverFunc)
+    }
 })
 
 
