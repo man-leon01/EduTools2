@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    z-index: 20;
 }
 
 #load.active{
@@ -21,8 +22,7 @@
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: #f1f1f1;
-    /* background-color: var(--color-primary); */
+    background-color: var(--color-bg-white);
     box-shadow: 0 -0.4rem rgba(0, 0, 1, .1) inset;
 
     animation: cycle 1s ease-in-out infinite;

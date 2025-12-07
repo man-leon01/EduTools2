@@ -64,10 +64,8 @@ inputBoxColor.addEventListener("input", (e) => {
 
 inputBoxRange.addEventListener("input", (e) => {
     giftName.style.fontSize = `${parseInt(e.target.value)}px`
-    console.log(`${parseInt(e.target.value)}px`);
+    // console.log(`${parseInt(e.target.value)}px`);
 })
-
-
 
 
 

@@ -3,6 +3,9 @@
 @import url(./mygift.css);
 @import url(./home.css);
 @import url(./load.css);
+@import url(./tools.css);
+@import url(./toolsvideo.css);
+@import url(./courses.css);
 
 *, *::after, *::before{
     margin: 0;
@@ -38,7 +41,7 @@ input, button{
     width: 8px;
 }
 ::-webkit-scrollbar-track{
-    background-color: #f1f1f1;
+    background-color: var(--color-bg-white);
     border-left: var(--color-border);
 }
 ::-webkit-scrollbar-thumb{
@@ -50,12 +53,9 @@ input, button{
     --color-primary: #4361ee;
     --color-primary-light: #bfd6ff80;
     --color-primary-hover: #4f69db;
-    --color-danger: #eeaa11;
-    --color-success: #eeaa11;
-    --color-warning: #eeaa11;
     --color-white: #fff;
-    /* --color-dark: #eeaa11; */
-    --color-dark: #250902;
+    --color-bg-white: #f1f1f1;
+    --color-dark: #070707;
     --color-border: 1px solid #4c576023;
     --color-border-primary: 1px solid #4361ee;
     --border-radius-1: 0.45rem;
@@ -150,9 +150,6 @@ aside{
     color: var(--color-primary);
 }
 
-/* .side-nav{
-    background-color: yellow;
-} */
 
 .sub-side-nav{
     display: flex;
@@ -160,7 +157,6 @@ aside{
     margin-left: 10%;
     height: 0;
     overflow-y: hidden;
-    /* background-color: red; */
     transition: .3s ease;
 }
 
@@ -180,7 +176,6 @@ aside{
 
 main{
     width: calc(100% - 250px);
-    /* height: 100vh; */
     background-color: var(--color-danger);
     overflow-y: auto;
     overflow-x: hidden;
@@ -198,6 +193,7 @@ nav{
     top: 0;
     right: 0;
     left: 0;
+    z-index: 10;
 }
 
 #menu{
@@ -214,7 +210,7 @@ nav{
 
 #menu:hover{
     transition: .4s ease;
-    background-color: #f1f1f1;
+    background-color: var(--color-bg-white);
 }
 
 
@@ -263,9 +259,6 @@ nav{
     #menu{
         display: flex;
     }
-    /* .side-nav .side-nav-1>span>span, .title-menu, .title1>span{
-        display: none;
-    } */
     .title1{
         display: none;
     }
@@ -289,9 +282,6 @@ nav{
     main{
         width: 100%;
     }
-    /* aside.side .side-nav>.side-nav-1>span>span, aside.side .title2, aside.side .title>span{
-        display: flex;
-    } */
     main.full{
         width: 100%;
     }

@@ -1,0 +1,108 @@
+@import url("./style.css");
+
+#courses{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    min-height: calc(100vh - 55px);
+    background-color: var(--color-bg-white);
+    padding: 1.5rem;
+    gap: 2rem;
+    padding: 1rem .5rem 10rem;
+    align-items: center;
+
+}
+
+#courses.display{
+    display: flex;
+}
+#courses h1{
+    font-size: 2rem;
+    align-self: flex-start;
+}
+#courses h1 span{
+    color: var(--color-primary);
+}
+
+#courses .display-video{
+    width: 100%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+}
+#courses .display-video>div{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-light);
+    border: var(--color-border);
+    border-radius: var(--border-radius-1);
+}
+#courses .display-video svg{
+    width: 80px;
+    height: 80px;
+    color: var(--color-primary);
+}
+#courses .display-video iframe{
+    width: 80% !important;
+    height: 100% !important;
+    border-radius: var(--border-radius-1) !important;
+}
+
+#courses .lists{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#courses .lists .list{
+    display: flex;
+    align-items: center;
+    border: var(--color-border);
+    border-radius: var(--border-radius-1);
+    padding: .4rem 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+#courses .lists .list:hover{
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    transition: .2s ease-in;
+}
+#courses .lists .list.active{
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+}
+#courses .lists .list svg{
+    width: 35px;
+    height: 35px;
+    color: var(--color-primary);
+}
+#courses .lists .list span{
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 800px) {
+    #courses .display-video>div, #courses .display-video iframe{
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #courses h1{
+        font-size: 1.8rem;
+    }
+    #courses .display-video>div, #courses .display-video iframe{
+        width: 100% !important;
+        height: 90% !important;
+    }
+    #courses .lists .list svg{
+    width: 30px;
+    height: 30px;
+    }
+    #courses .lists .list span{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,67 @@
+@import url("./style.css");
+
+#tools-video{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    min-height: calc(100vh - 55px);
+    background-color: var(--color-bg-white);
+    padding: 1.5rem 1.5rem 10rem;
+    gap: 2rem;
+    padding-bottom: 5rem;
+}
+
+#tools-video.display{
+    display: flex;
+}
+#tools-video h1{
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+#tools-video .cards{
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 110px;
+    gap: 1rem;
+}
+
+#tools-video .cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    border: var(--color-border);
+    border-radius: var(--border-radius-2);
+    background-color: var(--color-primary-light);
+    padding: 1rem;
+}
+#tools-video .cards .card span{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+#tools-video .cards .card button{
+    align-self: self-end;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    #tools-video .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    #tools-video .cards .card span{
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 450px) {
+    #tools-video .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

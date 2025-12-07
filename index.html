@@ -81,14 +81,14 @@
                 <span>EduTools</span>
             </div>
             <div id="user">
-                <span>Man Léon</span>
+                <span>Etudiant</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round-icon lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
             </div>
         </nav>
 
         <!-- ACCEUIL -->
         <section id="home" class="display">
-            <h1>Welcome, <span>Man Léon</span></h1>
+            <h1>Bienvenue chèr(e) Etudiant(e) sur <span>EduTools</span></h1>
             <div class="all-cards">
                 <h2>Evenements</h2>
                 <div class="cards">
@@ -108,8 +108,8 @@
                 <h2>Courses</h2>
                 <div class="cards cards-2">
                     <div class="card-2">
-                        <span>Algèbre Linéaire</span>
-                        <button class="btn">Regarder</button>
+                        <span>Python</span>
+                        <button class="btn" data-key="courses">Regarder</button>
                     </div>
                     <div class="card-2">
                         <span>Optique Ondulatoire</span>
@@ -124,8 +124,129 @@
                         <button class="btn">Regarder</button>
                     </div>
                 </div>
+                <h2>Quelques Endroits</h2>
+                <div class="cards">
+                    <div class="card-3">
+                        <img src="./src/images/images_ul/amphi_johnson.webp" alt="amphi_johnson" >
+                        <span>Amphi 1500 JOHNSON</span>
+                    </div>
+                    <div class="card-3">
+                        <img src="./src/images/images_ul/amphi1000.webp" alt="amphi1000" >
+                        <span>Amphi 1000</span>
+                    </div>
+                    <div class="card-3">
+                        <img src="./src/images/images_ul/image_cool.webp" alt="image_cool">
+                        <span>COOL</span>
+                    </div>
+                    <div class="card-3">
+                        <img src="./src/images/images_ul/image_presidence_ul.webp" alt="image_presidence_ul">
+                        <span>Présidence de l'UL</span>
+                    </div>
+                    <div class="card-3">
+                        <img src="./src/images/images_ul/image_epl.webp" alt="image_epl">
+                        <span>EPL - UL</span>
+                    </div>
+                    <div class="card-3">
+                        <img src="./src/images/images_ul/image_unipod.webp" alt="image_unipod">
+                        <span>Unipod</span>
+                    </div>
+                </div>
             </div>
+
         </section>
+
+
+        <!-- CUSTOM TOOLS -->
+         <section id="tools">
+            <h1>Outils Etudiants</h1>
+            <div class="cards">
+                <div class="card" data-key="toolsVideo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                    <span>Lean Courses</span>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-pen-icon lucide-notebook-pen"><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4"/><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+                    <span>NoteBook</span>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-ccw-icon lucide-refresh-ccw"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
+                    <span>Convertisseur</span>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot-icon lucide-bot"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                    <span>Simulation IA</span>
+                </div>
+            </div>
+         </section>
+
+
+        <!-- CUSTOM TOOLS VIDEO BUTTON -->
+         <section id="tools-video">
+            <h1>Courses</h1>
+            <div class="cards">
+                <div class="card">
+                    <span>Python</span>
+                    <button class="btn" data-key="courses">Regarder</button>
+                </div>
+                <div class="card">
+                    <span>Optique Ondulatoire</span>
+                    <button class="btn">Regarder</button>
+                </div>
+                <div class="card">
+                    <span>POO: Java</span>
+                    <button class="btn">Regarder</button>
+                </div>
+                <div class="card">
+                    <span>Programmation C</span>
+                    <button class="btn">Regarder</button>
+                </div>
+                <div class="card">
+                    <span>ATO</span>
+                    <button class="btn">Regarder</button>
+                </div>
+                <div class="card">
+                    <span>Séries & Intégrales</span>
+                    <button class="btn">Regarder</button>
+                </div>
+            </div>
+         </section>
+
+        <!-- CUSTOM TOOLS VIDEOS COURSES -->
+         <section id="courses">
+            <h1>Apprendre Python avec <span>Graven</span></h1>
+            <div class="display-video">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                </div>
+            </div>
+            <h2>Chapitres</h2>
+            <div class="lists">
+                <div class="list" data-id="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                    <span>Python#1: LES BASES & PREREQUIS</span>
+                </div>
+                <div class="list" data-id="1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                    <span>Python#2: LES VARIABLES</span>
+                </div>
+                <div class="list" data-id="2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                    <span>Python#3: LES CONDITIONS</span>
+                </div>
+                <div class="list" data-id="3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                    <span>Python#4: LES LISTES</span>
+                </div>
+                <div class="list" data-id="4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                    <span>Python#5: LES BOUCLES</span>
+                </div>
+                <div class="list" data-id="5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                    <span>Python#6: LES FONCTIONS</span>
+                </div>
+            </div>
+         </section>
 
         <!-- CUSTON "MON CADEAU" -->
          <section id="my-gift">
